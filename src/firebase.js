@@ -3,12 +3,12 @@ import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTHDOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECTID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGEBUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGINGSENDERID,
-  appId: process.env.REACT_APP_FIREBASE_APPID,
+  apiKey: "AIzaSyDn1kfjlH_N4Z2PeTpSBiM8X13JXuPiPsA",
+  authDomain: "blog-50e51.firebaseapp.com",
+  projectId: "blog-50e51",
+  storageBucket: "blog-50e51.appspot.com",
+  messagingSenderId: "681976565210",
+  appId: "1:681976565210:web:db988338091542233b84e3",
 };
 
 const app = initializeApp(firebaseConfig);
