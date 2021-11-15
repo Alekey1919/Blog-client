@@ -1,0 +1,143 @@
+.edit-blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  h1 {
+    margin-top: 50px;
+  }
+
+  #cancel {
+    position: absolute;
+    background: $yellow;
+    border: 1px solid $lightBlack;
+    border-radius: 10px;
+    right: 0;
+    top: 30px;
+    padding: 5px 10px;
+
+    &:hover {
+      background: darken($yellow, 10);
+    }
+  }
+
+  &-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+
+    img {
+      width: 50%;
+    }
+
+    label {
+      width: 150px;
+      height: 40px;
+      border-radius: 20px;
+      background: $yellow;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      margin-top: 50px;
+      cursor: pointer;
+    }
+
+    p {
+      text-align: center;
+      margin: 10px auto auto;
+    }
+
+    input {
+      visibility: hidden;
+    }
+  }
+
+  &-title,
+  &-body {
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+
+    label {
+      margin-bottom: 30px;
+      font-size: 1.5rem;
+    }
+
+    input {
+      width: 60%;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+      background: none;
+      border: none;
+      border-bottom: 2px solid $yellow;
+
+      &:focus {
+        outline: none;
+        border-bottom: 2px solid darken($yellow, 10);
+      }
+    }
+  }
+
+  textarea {
+    width: 80%;
+    height: 550px;
+    border: 2px solid $yellow;
+    padding: 10px;
+    resize: none;
+
+    &:focus {
+      outline: none;
+      border: 2px solid darken($yellow, 10);
+    }
+  }
+
+  #confirm {
+    width: 150px;
+    border-radius: 20px;
+    border: 1px solid $lightBlack;
+    background: $yellow;
+    margin: auto;
+    font-size: 2rem;
+    margin: 20px 0 40px 0;
+
+    &:hover {
+      background: darken($yellow, 10);
+    }
+  }
+  &-tags {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-bottom: 2px solid $yellow;
+    }
+
+    &-container {
+      margin-top: 10px;
+      border: 2px solid $yellow;
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+
+        label {
+          border-bottom: none;
+        }
+
+        input {
+          margin: auto 0;
+        }
+      }
+    }
+  }
+}

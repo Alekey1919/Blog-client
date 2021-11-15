@@ -1,0 +1,26 @@
+.tag-no-result {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  .router-link {
+    display: flex;
+    justify-content: center;
+    color: $yellow;
+
+    &:hover {
+      color: darken($yellow, 10);
+    }
+  }
+}
+
+.tag-search {
+  h1 {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .row {
+    margin-top: 20px;
+  }
+}

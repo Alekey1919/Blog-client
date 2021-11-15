@@ -1,0 +1,63 @@
+@import "./Config";
+@import "./Navbar";
+@import "./BlogPreview";
+@import "./Login";
+@import "./Profile";
+@import "./Blog";
+@import "./Home";
+@import "./WriteBlog";
+@import "./EditBlog";
+@import "./Search";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+}
+
+*::selection {
+  background: $yellow;
+}
+
+.none {
+  display: none !important;
+}
+
+.not-found {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.row {
+  justify-content: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $yellow;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darken($yellow, 10);
+}

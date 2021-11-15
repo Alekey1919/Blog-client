@@ -1,0 +1,203 @@
+.blog {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &-options {
+    position: relative;
+    transition: margin-bottom 0.5s;
+
+    right: 0px;
+    &-toggler {
+      color: $yellow;
+      font-size: 1.5rem;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      transition: right 0.5s ease-in-out;
+      cursor: pointer;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: 10px;
+      top: 40px;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+
+      &.toggled {
+        opacity: 1;
+      }
+
+      button {
+        background: none;
+        border: 2px solid $yellow;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 5px;
+        font-size: 1rem;
+
+        &:hover {
+          background: $yellow;
+          color: $darkBlack;
+        }
+      }
+    }
+
+    &-messages {
+      text-align: center;
+      margin-top: 100px;
+    }
+  }
+
+  img {
+    width: 50%;
+    margin: auto;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 1.2rem;
+
+    .author-link {
+      font-size: 1.5rem;
+      text-decoration: underline;
+      color: $darkBlack;
+      margin-left: 10px;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+  .date {
+    text-align: center;
+  }
+
+  &-body {
+    width: 50%;
+    margin: auto;
+    margin-top: 40px;
+  }
+
+  &-likes {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.3rem;
+
+    p {
+      margin-right: 10px;
+    }
+    i {
+      color: $yellow;
+      margin-left: 5px;
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+  }
+
+  &-comments {
+    margin: 30px;
+
+    .blog-comment {
+      display: flex;
+      margin: 20px 0px;
+
+      p {
+        margin: 0 10px;
+      }
+
+      &-commentor {
+        text-decoration: underline;
+      }
+
+      i {
+        color: $yellow;
+        margin: 5px 0 0 0;
+        cursor: pointer;
+
+        &:hover {
+          color: darken($yellow, 10);
+        }
+      }
+    }
+
+    &-add-comment {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid $lightGrey;
+      padding: 10px;
+      font-size: 1.2rem;
+      border-radius: 5px;
+
+      input {
+        border: 1px solid $yellow;
+        margin: 10px;
+        font-size: 1rem;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      button {
+        width: 130px;
+        border: none;
+        background: $yellow;
+        font-size: 1.3rem;
+        margin: 10px;
+
+        &:hover {
+          background: darken($yellow, 10);
+        }
+      }
+    }
+  }
+}
+
+.active {
+  right: 85px !important;
+}
+
+@media (max-width: 768px) {
+  .blog {
+    &-options {
+      div {
+        background: $yellow;
+        border-radius: 10px;
+
+        button {
+          border: 1px solid $lightBlack;
+          color: $lightBlack;
+        }
+      }
+      // &.margin {
+      //   margin-bottom: 160px;
+      // }
+    }
+
+    img,
+    &-body {
+      width: 100%;
+    }
+
+    &-likes {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .blog-comments {
+    margin: 0;
+  }
+}
