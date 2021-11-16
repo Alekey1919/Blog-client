@@ -2,20 +2,33 @@ import React, { useState, useEffect } from "react";
 import BlogPreview from "../Components/BlogPreview";
 import Axios from "axios";
 import { useNavigate } from "react-router";
+import Loading from "../images/loading.svg";
 
 function Home() {
   const [blogs, setBlogs] = useState([]);
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     Axios.post("https://mern-blog-project-server.herokuapp.com/getBlogs")
-      .then((res) => setBlogs(res.data))
+      .then((res) => {
+        setBlogs(res.data);
+        setLoading(false);
+      })
       .catch((err) => console.error(err));
   }, []);
 
   const tagSearch = (tag) => {
     navigate(`/tag/${tag}`);
   };
+
+  if (loading) {
+    return (
+      <div className="loading">
+        <img src={Loading} alt="Loading" />
+      </div>
+    );
+  }
 
   return (
     <div className="home">

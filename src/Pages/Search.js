@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Axios from "axios";
 import BlogPreview from "../Components/BlogPreview";
+import Loading from "../images/loading.svg";
 
 function Search() {
   const [blogs, setBlogs] = useState();
   const [noBlogs, setNoBlogs] = useState();
+  const [loading, setLoading] = useState(true);
 
   const params = useParams();
 
@@ -16,6 +18,7 @@ function Search() {
       .then((res) => {
         if (res.data.length >= 1) {
           setNoBlogs(false);
+          setLoading(false);
           setBlogs(res.data);
         } else {
           setNoBlogs(true);
@@ -23,6 +26,14 @@ function Search() {
       })
       .catch((err) => console.error(err.message));
   }, [params]);
+
+  if (loading) {
+    return (
+      <div className="loading">
+        <img src={Loading} alt="Loading" />
+      </div>
+    );
+  }
 
   if (noBlogs) {
     return (
