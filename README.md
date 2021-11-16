@@ -2,11 +2,9 @@
 
 [Visit site](https://happy-northcutt-a34d62.netlify.app/)
 
+[Server code](https://github.com/Alekey1919/Blog-server)
 
--------------------------------------------------------------------------------------------
-
-
-
+---
 
 # Getting Started with Create React App
 
