@@ -1,3 +1,13 @@
+### Social media concept app about blogs built with the MERN stack. ✍
+
+[Visit site](https://happy-northcutt-a34d62.netlify.app/)
+
+
+-------------------------------------------------------------------------------------------
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
