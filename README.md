@@ -1,3 +1,5 @@
+![Preview](./src/images/Preview.png)
+
 ### Social media concept app about blogs built with the MERN stack. ✍
 
 [Visit site](https://happy-northcutt-a34d62.netlify.app/)
